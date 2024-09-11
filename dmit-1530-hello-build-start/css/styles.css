@@ -1,0 +1,128 @@
+/* 
+
+    Colour Palette
+
+    Darkest – #07182E
+    Columns – #132945
+    Accent  – #29D8BE
+    Text    – #CBD6F5
+    Grey    – #6E7997
+
+    Fonts
+
+    font-family: 'Oxygen', sans-serif;
+    font-family: 'Oxygen Mono', monospace;
+
+    Layout Grid
+
+    Row Height is 16px.
+    Column Width is 296px.
+    Vertical Gutters are 18px.
+    
+    Note for future buid for the lecture:
+    also dont use fixed width
+    dont use 100%
+    text align is something you dont use normally
+
+    i gotta review more flexbox 
+
+    in russian flex website learn up to align items for 2 weeks 
+
+    dont use inline styles until bootstrap
+
+    
+*/
+
+/*utility classes */
+body {
+    background-color: #07182E;
+    font-size: 100%;
+    font-family: 'Oxygen', sans-serif;
+    color: #CBD6F5 ;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 960px;
+    padding: 96px 32px;
+}
+
+/*header */
+
+h1 {
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 64px;
+    margin-bottom: 16px;
+    color: rgba(110, 121, 151, 1);
+}
+/* we triiger paragraph inside header*/
+header p {
+    font-size: 24px;
+    margin-bottom: 48px;
+}
+header p span, 
+a.btn, main h2 {
+    color: #29D8BE;
+}
+
+a.btn {
+    border: 3px solid #29D8BE;
+    border-radius: 16px;
+    /* inline block makes it easier to click because it increases the hitbox when you click perfect for mobile*/
+    display: inline-block;
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 24px;
+    margin-bottom: 64px;
+    padding: 16px 0;
+    text-decoration: none;
+    width: 296px;
+    
+}
+
+a.btn:hover {
+    background-color: #29D8BE ;
+    color: #132945;
+    /* anchor tags dont automatically get the little pointer finger in all browsers, 
+    so this smakes sure of it*/
+    cursor: pointer;
+}
+/* Main */
+
+main{
+    display: flex;
+    /* space bewteen coloums */
+    gap: 18px;
+    /*only works in flex this affects children but put on parent*/
+    justify-content: center;
+    margin-bottom: 48px;
+}
+/* dont need classes unless  its a requirement  */
+main section{
+    background-color: #132945;
+    border-radius: 16px;
+    line-height: 2;
+    padding: 48px 0;
+}
+
+main section h2 {
+    font-weight: normal;
+    font-size: 36px;
+
+}
+
+/* Footer
+by default images are inline, so we dont nessessarily need to 
+flex them this just makes it easier to pop in the gutter space
+*/
+
+footer div{
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+footer p{
+    color: #6E7997 ;
+}
